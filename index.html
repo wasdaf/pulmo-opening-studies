@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark"><meta name="theme-color" content="#121413">
+<meta name="description" content="The Pulmo opening film archive. Watch individual CT studies and comparison reels at their original resolution.">
+<title>Opening studies · Pulmo</title>
+<link rel="stylesheet" href="gallery.css">
+<script defer src="gallery.js"></script>
+</head>
+<body>
+<main>
+  <header class="mast"><div class="wordmark">Pulmo<span> / </span>Opening studies</div>
+    <a id="bundle" class="bundle" href="https://codeload.github.com/wasdaf/pulmo-opening-studies/zip/refs/heads/downloads">Download all previews</a>
+  </header>
+  <section class="toolbar" aria-label="Film selection">
+    <div class="picker">
+      <button id="browse" type="button" aria-expanded="false" aria-controls="menu" disabled>Browse previews <span class="num" id="count"></span><span class="chevron" aria-hidden="true"></span></button>
+      <div id="menu" hidden>
+        <label class="sr" for="search">Search previews by name, edition or date</label>
+        <input id="search" type="search" placeholder="Find a preview…" autocomplete="off">
+        <div class="results" id="results" role="listbox" aria-label="Previews, newest first"></div>
+      </div>
+    </div>
+    <div class="move"><button id="newer" type="button" disabled>Newer</button><span aria-hidden="true">/</span><button id="older" type="button" disabled>Older</button></div>
+  </section>
+  <div class="stage" id="stage"><video id="film" controls playsinline preload="metadata" aria-label="Preview player"></video></div>
+  <section class="caption" aria-labelledby="title">
+    <div class="info"><div class="edition" id="edition"></div><h1 id="title">Opening studies</h1>
+      <p id="note"></p><div class="specs"><time id="date"></time><span id="spec"></span></div>
+    </div>
+    <div class="actions"><button id="expand" type="button" disabled>Full screen</button><a id="download" hidden>Download preview</a></div>
+  </section>
+  <p id="status" role="status" aria-live="polite"></p>
+</main>
+</body></html>

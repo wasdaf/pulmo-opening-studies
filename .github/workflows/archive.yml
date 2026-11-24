@@ -1,0 +1,16 @@
+name: Publish verified opening archive
+on:
+  push:
+    branches: [archive-publish-20261123]
+permissions:
+  contents: write
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify pack and publish both trees
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 assemble.py
